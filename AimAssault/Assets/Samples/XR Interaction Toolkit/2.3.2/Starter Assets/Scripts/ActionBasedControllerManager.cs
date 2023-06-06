@@ -21,6 +21,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         /// </remarks>
         public const int k_UpdateOrder = XRInteractionUpdateOrder.k_Controllers - 1;
 
+
         [Space]
         [Header("Interactors")]
 
