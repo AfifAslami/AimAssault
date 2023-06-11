@@ -13,7 +13,7 @@ public class ActivateTeleportationRay : MonoBehaviour
         public InputActionProperty rigthActivate;
 
         public InputActionProperty leftCancel;
-        public InputActionProperty rigthCancel;
+        public InputActionProperty rightCancel;
 
     // Start is called before the first frame update
         
