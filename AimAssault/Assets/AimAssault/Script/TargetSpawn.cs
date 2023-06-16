@@ -17,13 +17,13 @@ public class TargetSpawn : MonoBehaviour
 
     IEnumerator EnemyDrop()
     {
-        while(enemyCount <5)
+        while(enemyCount < 10)
         {
-            xPos = Random.Range(34, 38);
+            xPos = Random.Range(35, 38);
             zPos = Random.Range(39, 50);
             Instantiate(theEnemy,new Vector3(xPos,4,zPos),Quaternion.identity);
             yield return new WaitForSeconds(0.1f);
-            enemyCount += 1;
+            enemyCount += 2;
         }
     }
 }
