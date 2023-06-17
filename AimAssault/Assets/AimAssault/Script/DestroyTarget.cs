@@ -5,10 +5,12 @@ using UnityEngine;
 public class DestroyTarget : MonoBehaviour
 {
     private TargetSpawn spawn;
+    private ScoreManager scoreManager;
 
     private void Start()
     {
         spawn = FindObjectOfType<TargetSpawn>();
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -16,6 +18,9 @@ public class DestroyTarget : MonoBehaviour
         if (collision.collider.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
+
+            // Tambahkan skor
+            scoreManager.AddScore();
 
             // Kurangi jumlah musuh yang tersisa
             spawn.targetCounter--;
